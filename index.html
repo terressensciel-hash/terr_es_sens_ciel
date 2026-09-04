@@ -584,8 +584,15 @@
                 <!-- Formulaire de contact -->
                 <div class="contact-form">
                     <h3>Réservez votre séance</h3>
-                    <form name="reservation" method="POST" data-netlify="true">
-                      <input type="hidden" name="form-name" value="reservation">
+                    <!-- Modification de la ligne ci-dessous pour envoyer vers Web3Forms -->
+                    <form action="https://web3forms.com" method="POST">
+                        
+                        <!-- Remplacer VOTRE_CLÉ_ICI par la clé reçue par e-mail -->
+                        <input type="hidden" name="access_key" value="VOTRE_CLÉ_ICI">
+                        
+                        <!-- Redirection automatique après l'envoi (Optionnel) -->
+                        <input type="hidden" name="from_name" value="Site de Sylvie - Réservations">
+
                         <div class="form-group">
                             <label for="nom">Nom :</label>
                             <input type="text" id="nom" name="nom" required>
